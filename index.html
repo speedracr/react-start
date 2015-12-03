@@ -5,13 +5,33 @@
     <title>React World</title>
     <meta name="viewport" content="width=device-width">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" type="text/css">
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </head>
   <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
-    <script src="velocity.ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
-    <script src="JSXTransformer.js"></script>
+    <h2>Much page, so index</h2>
+    <div id="mount-point"></div>
+    <script type="text/jsx">
+      /** @jsx React.DOM */
+      var MyComponent = React.createClass({
+        getInitialState: function(){
+          return {
+            count: 5
+          }
+        },
+        render: function(){
+          return (
+            <h1>Hello {this.state.count}!</h1>
+            );
+          }
+      });
+
+      React.render(
+        <MyComponent name="World" />
+        document.getElementById('myDiv')
+        );
+
+    </script>
   </body>
 </html>
