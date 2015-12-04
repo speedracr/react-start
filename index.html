@@ -4,34 +4,14 @@
     <meta charset="utf-8">
     <title>React World</title>
     <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400;700" rel="stylesheet" type="text/css">
     <script src="bower_components/react/react.js"></script>
     <script src="bower_components/react/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.11.0/JSXTransformer.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
-    <h2>Much page, so index</h2>
-    <div id="mount-point"></div>
-    <script type="text/jsx">
-      /** @jsx React.DOM */
-      var MyComponent = React.createClass({
-        getInitialState: function(){
-          return {
-            count: 5
-          }
-        },
-        render: function(){
-          return (
-            <h1>Hello {this.state.count}!</h1>
-            );
-          }
-      });
-
-      React.render(
-        <MyComponent name="World" />
-        document.getElementById('myDiv')
-        );
-
-    </script>
+    
   </body>
 </html>
